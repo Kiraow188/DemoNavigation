@@ -1,8 +1,11 @@
 package sg.edu.rp.c347.demonavigation;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 public class NewActivity extends AppCompatActivity {
 
@@ -15,6 +18,16 @@ public class NewActivity extends AppCompatActivity {
 
         ab = getSupportActionBar();
         ab.setDisplayHomeAsUpEnabled(true);
+
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //action
+                Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 }
